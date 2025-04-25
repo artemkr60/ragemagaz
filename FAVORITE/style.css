@@ -1,0 +1,316 @@
+/* Общие стили страницы - СКОПИРОВАНО ИЗ CATALOG/style.css */
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Mulish', sans-serif;
+}
+
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F5F5, #777777);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.53;
+    z-index: 0;
+    animation: moveDiagonal 15s linear infinite;
+}
+
+@keyframes moveDiagonal {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+
+.status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 44px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+    color: #000000;
+    font-size: 15px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #D9D9D9;
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png');
+    background-repeat: repeat;
+    background-size: 225px 225px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 90;
+}
+
+.top-icons-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.top-icons-container img {
+    pointer-events: auto;
+}
+
+.icon-logo-darktheme {
+    height: 55px;
+    width: auto;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.icon-account {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.main-content {
+    padding-top: 110px;
+    padding-bottom: 93px;
+    padding-left: 24px; /* Добавлен отступ для контента */
+    padding-right: 24px; /* Добавлен отступ для контента */
+    overflow-y: auto;
+    flex-grow: 1;
+    z-index: 2;
+    position: relative;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для нижней навигации */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 428px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px 0 10px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 32px;
+    margin-bottom: 10px;
+}
+
+.nav-icon {
+    text-decoration: none;
+}
+
+.nav-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.nav-icon:not(.active) img {
+    opacity: 0.5;
+}
+
+.nav-icon.active img {
+    opacity: 1;
+}
+
+.nav-slider-container {
+    padding: 0 32px;
+    height: 4px;
+    position: relative;
+}
+
+.nav-slider {
+    height: 4px;
+    background-color: #A8FF00;
+    border-radius: 100px;
+    width: 25%;
+    position: absolute;
+    left: 50%; /* ИЗМЕНЕНО: Позиция под 3й иконкой */
+    transition: left 0.3s ease;
+}
+
+/* Добавить стили для контента страницы Избранное ниже */
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #373737;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 0px 0px 12px rgba(168, 255, 0, 1); /* ДОБАВЛЕНО: Свечение */
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступ между карточками */
+    transition: transform 0.3s ease; /* NEW: For overscroll bounce */
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #CBCBCB, #FFFFFF 41.5%);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 22px 0px rgba(212, 252, 212, 1);
+    position: relative;
+    padding-right: 65px;
+}
+
+.item-image-container {
+    width: 90px; /* Фиксированная ширина контейнера изображения */
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.5); /* Фон под изображением, если оно не квадратное */
+    border-radius: 15px; /* Скругление из Figma */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8; /* Сделаем чуть прозрачнее, как в Figma */
+}
+
+.item-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Чтобы видеть всю картинку */
+}
+
+.item-image.placeholder {
+     width: 60%; /* Размер заглушки */
+     height: 60%;
+     opacity: 0.5;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Отступ между текстами */
+    flex-grow: 1; /* Занимает оставшееся место */
+}
+
+.item-name {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #373737;
+    line-height: 1.2;
+    text-shadow: 0px 1px 4px rgba(188, 255, 63, 1); /* ДОБАВЛЕНО: Свечение из Figma */
+}
+
+.item-price {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #6BFEED;
+}
+
+.item-size {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #5DADE2;
+}
+
+.add-to-cart-btn {
+    background-color: #EEF1F4;
+    border-radius: 20px;
+    border: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.add-to-cart-btn img {
+    width: 16px;
+    height: 16px;
+} 

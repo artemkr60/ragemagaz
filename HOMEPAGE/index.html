@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="status-bar">
+            <!-- Статус бар теперь пустой, т.к. его рисует ОС/браузер -->
+            <div class="time"></div>
+            <div class="status-icons">
+                <!-- Иконки удалены -->
+            </div>
+        </header>
+
+        <!-- Контейнер для верхних иконок поверх шапки -->
+        <div class="top-icons-container">
+            <!-- Используем объединенный логотип -->
+            <img src="assets/darktheme.png" alt="Logo" class="icon-logo-darktheme">
+            <!-- Иконка аккаунта остается справа -->
+            <a href="../ACCOUNT/index.html" class="icon-button icon-account-link">
+                <img src="../assets/Account.svg" alt="Account" class="icon-account">
+            </a>
+        </div>
+
+        <main class="main-content">
+            <!-- Фон шапки -->
+            <div class="header-background"></div>
+
+            <!-- Основной контент (Фон, Магазины, Новинки, Новости) -->
+            <div class="background-texture"></div>
+
+            <!-- Секции контента удалены -->
+            
+        </main>
+
+        <nav class="bottom-nav">
+            <!-- Нижняя навигация (Home, Catalog, Favorite, Cart) -->
+            <div class="nav-icons">
+                <a href="#" class="nav-icon active">
+                    <img src="../assets/home.svg" alt="Home">
+                </a>
+                <a href="../CATALOG/index.html" class="nav-icon">
+                    <img src="../assets/catalog.svg" alt="Catalog">
+                </a>
+                <a href="../FAVORITE/index.html" class="nav-icon">
+                    <img src="../assets/favorite.svg" alt="Favorite">
+                </a>
+                <a href="../CART/index.html" class="nav-icon">
+                    <img src="../assets/shopping_cart.svg" alt="Cart">
+                </a>
+            </div>
+             <div class="nav-slider-container">
+                <div class="nav-slider"></div>
+             </div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

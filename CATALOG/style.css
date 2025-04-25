@@ -1,0 +1,560 @@
+/* Общие стили страницы - СКОПИРОВАНО ИЗ HOMEPAGE/style.css */
+body {
+    margin: 0;
+    background-color: #f0f0f0; /* Фоновый цвет, если текстура не загрузится */
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Mulish', sans-serif; /* Добавлен шрифт по умолчанию */
+}
+
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F5F5, #777777);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/cartographer_1_bg.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.53;
+    z-index: 0;
+    animation: moveDiagonal 15s linear infinite;
+}
+
+@keyframes moveDiagonal {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+
+.status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 44px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110; /* ИЗМЕНЕНО: Увеличено */
+    color: #000000;
+    font-size: 15px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #D9D9D9;
+    background-image: url('assets/cartographer_1_bg.png');
+    background-repeat: repeat;
+    background-size: 225px 225px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 90; /* ИЗМЕНЕНО: Увеличено (ниже иконок) */
+}
+
+/* Стили для контейнера верхних иконок - СКОПИРОВАНО ИЗ HOMEPAGE/style.css */
+.top-icons-container {
+    position: fixed;
+    top: 20px; /* Подстроить при необходимости */
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 60px; /* Подстроить при необходимости */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* ИЗМЕНЕНО: Увеличено (выше фона шапки, ниже статус-бара) */
+    pointer-events: none;
+}
+
+.top-icons-container img {
+    pointer-events: auto;
+}
+
+.icon-logo-darktheme {
+    height: 55px;
+    width: auto;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.icon-account {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* Основной контент страницы каталога */
+.main-content {
+    padding-top: 110px; /* Отступ для фона шапки */
+    padding-bottom: 93px; /* Отступ для нижней навигации */
+    padding-left: 0; /* Убираем лишний отступ */
+    padding-right: 0; /* Убираем лишний отступ */
+    overflow-y: auto;
+    flex-grow: 1;
+    z-index: 2;
+    position: relative;
+}
+
+/* Стили для страницы каталога */
+
+.catalog-page {
+    max-width: 428px; /* Ширина макета из Figma */
+    margin: 0 auto;
+    background-color: #fff; /* Основной фон контента */
+    min-height: 100vh; /* Или высота макета */
+    position: relative;
+    padding-bottom: 93px; /* Высота нижней навигации */
+    box-sizing: border-box;
+}
+
+/* Стили для шапки */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px; /* Отступы из Figma */
+    /* Добавить фон и стили для кнопок */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0; /* Убрали лишний padding */
+    cursor: pointer;
+    display: flex; /* Для центрирования иконки, если нужно */
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Примерный размер кликабельной области */
+    height: 30px;
+}
+
+.icon-button img {
+    display: block;
+    width: 24px; /* Размер самой иконки */
+    height: 24px;
+}
+
+/* Стили для поиска */
+.shop-search {
+    padding: 0 24px; /* Примерные отступы */
+    margin-bottom: 20px; /* Отступ из Figma */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #EEF1F4; /* Фон из Figma */
+    border-radius: 15px; /* Скругление из Figma */
+    padding: 10px 15px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity: 0.6; /* Пример из Figma */
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    color: #953FD3; /* Цвет текста из Figma (с поправкой на opacity) */
+}
+
+.search-bar input::placeholder {
+    color: rgba(149, 63, 211, 0.4); /* Цвет плейсхолдера из Figma */
+    font-weight: 300;
+}
+
+/* Стили для навигации магазина */
+.shop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px; /* Отступы */
+    margin-bottom: 20px;
+}
+
+.popular-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000; /* Цвет из Figma */
+}
+
+/* Стили для сетки товаров */
+.shop-grid {
+    padding: 0 16px; /* Отступы для карточек */
+    transition: transform 0.3s ease; /* NEW: For overscroll bounce */
+}
+
+.product-card-pair {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px; /* Отступ между рядами */
+}
+
+.product-card {
+    width: calc(50% - 8px);
+    /* Добавить стили для фона, тени, скругления */
+    background: linear-gradient(to bottom, #CBCBCB, #FFFFFF); /* Добавим фон как у избранного для единообразия */
+    border-radius: 18px; /* Примерное скругление */
+    padding: 10px; /* Небольшой внутренний отступ */
+    box-sizing: border-box;
+    box-shadow: 0px 0px 22px 0px rgba(212, 252, 212, 1); /* ДОБАВЛЕНО: Свечение */
+    margin-bottom: 10px; /* Добавим отступ снизу, если он нужен между элементами карточки */
+}
+
+.product-image-container {
+    /* Стили контейнера изображения, возможно скругление, фон */
+    border-radius: 18px; /* Пример скругления из Figma */
+    overflow: hidden;
+    /* Убираем фон отсюда, он теперь на .product-card */
+    margin-bottom: 10px; /* Отступ из Figma */
+    aspect-ratio: 1 / 1; /* Сделать квадратным или по размеру из Figma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-image.placeholder {
+    width: 60%; /* Размер иконки заглушки */
+    height: 60%;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 0 5px; /* Отступ из Figma */
+}
+
+.product-price {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6BFEED; /* Цвет из Figma */
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 800; /* Или 300 в зависимости от карточки */
+    color: #373737; /* Цвет из Figma */
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Стили для нижней навигации */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 428px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px 0 10px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    z-index: 100; /* ИЗМЕНЕНО: Увеличено */
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-around; /* ИЗМЕНЕНО: для равномерного распределения */
+    align-items: center;
+    padding: 0 32px; /* Отступы из Figma */
+    margin-bottom: 10px; /* Отступ до слайдера */
+}
+
+.nav-icon {
+    text-decoration: none;
+}
+
+.nav-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5; /* Неактивные иконки по умолчанию */
+    transition: opacity 0.3s ease;
+}
+
+/* Явное правило для неактивных иконок (на всякий случай) */
+.nav-icon:not(.active) img {
+    opacity: 0.5;
+}
+
+.nav-icon.active img {
+    opacity: 1; /* Активная иконка */
+}
+
+.nav-slider-container {
+    padding: 0 32px; /* Отступы как у иконок */
+    height: 4px; /* Высота для слайдера */
+    position: relative;
+}
+
+.nav-slider {
+    height: 4px;
+    background-color: #A8FF00; /* Цвет слайдера из Figma */
+    border-radius: 100px; /* Скругление из Figma */
+    width: 25%; /* ИЗМЕНЕНО: Ширина слайдера (1/4 от контейнера для 4 иконок) */
+    position: absolute;
+    left: 25%;  /* ИЗМЕНЕНО: Позиция под второй иконкой (Каталог) */
+    transition: left 0.3s ease;
+}
+
+/* Дополнительно: Медиа-запросы, стили для ховеров/активных состояний и т.д. */
+
+/* --- Product Detail Modal Styles --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align modal content to the bottom */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.modal-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 428px; /* Match container width */
+    max-height: 85vh; /* Limit height */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px 24px 30px; /* Padding inside modal */
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-overlay.modal-visible .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #eee;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.modal-close-btn img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+}
+
+.modal-product-image {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-product-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.modal-product-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.modal-product-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.modal-option-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-option-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    width: 50px; /* Fixed width for labels */
+}
+
+.modal-option-group select {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #A8FF00; /* Highlight selected color */
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    background: #f5f5f5;
+    border: none;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #777;
+}
+
+.quantity-value {
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.add-to-cart-modal-btn {
+    flex-grow: 1;
+    background-color: #A8FF00; 
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-modal-btn:hover {
+    background-color: #97e600;
+}
+
+/* --- End Modal Styles --- */ 

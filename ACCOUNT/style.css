@@ -1,0 +1,322 @@
+/* Общие стили страницы - СКОПИРОВАНО ИЗ CART/style.css */
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Mulish', sans-serif;
+    overscroll-behavior-x: contain; 
+}
+
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F5F5, #777777);
+    /* overflow: hidden; - Убрали ранее */
+    display: flex;
+    flex-direction: column;
+}
+
+.background-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png'); /* ИЗМЕНЕНО: Путь к общему ресурсу */
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.53;
+    z-index: 0;
+    animation: moveDiagonal 15s linear infinite;
+}
+
+@keyframes moveDiagonal {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+
+.status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 44px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+    color: #000000;
+    font-size: 15px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #D9D9D9;
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png'); /* ИЗМЕНЕНО: Путь к общему ресурсу */
+    background-repeat: repeat;
+    background-size: 225px 225px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 90;
+}
+
+.top-icons-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 60px;
+    display: flex;
+    /* ИЗМЕНЕНО: Выравнивание только левой иконки */
+    justify-content: flex-start; 
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.top-icons-container img,
+.top-icons-container button {
+    pointer-events: auto;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.main-content {
+    /* ИСПОЛЬЗУЕТСЯ АБСОЛЮТНОЕ ПОЗИЦИОНИРОВАНИЕ ИЗ CART */
+    overflow-y: auto;
+    z-index: 2;
+    overscroll-behavior-y: contain; 
+    -webkit-overflow-scrolling: touch; 
+    position: absolute;
+    top: 100px;  
+    bottom: 93px; /* Высота bottom-nav */
+    left: 0;
+    right: 0;
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 20px 24px; /* Отступы для контента аккаунта */
+}
+
+/* Стили для нижней навигации - СКОПИРОВАНО ИЗ CART/style.css */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 428px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px 0 10px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 32px;
+    margin-bottom: 10px;
+}
+
+.nav-icon {
+    text-decoration: none;
+}
+
+.nav-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.nav-icon:not(.active) img {
+    opacity: 0.5;
+}
+
+/* .nav-icon.active img { - Нет активной иконки */
+/*    opacity: 1; */
+/* } */
+
+.nav-slider-container {
+    padding: 0 32px;
+    height: 4px;
+    position: relative;
+}
+
+.nav-slider {
+    height: 4px;
+    background-color: #A8FF00;
+    border-radius: 100px;
+    width: 25%; 
+    position: absolute;
+    left: 0%; /* Позиция по умолчанию */
+    transition: left 0.3s ease;
+    /* opacity: 0; - Установлен инлайново в HTML */
+}
+
+/* --- Стили страницы Аккаунта --- */
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #373737;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 0px 0px 12px rgba(168, 255, 0, 1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #eee; /* Placeholder background */
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #777;
+}
+
+.account-menu {
+    margin-bottom: 30px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.05);
+    overflow: hidden; /* To clip corners */
+}
+
+.menu-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-link:hover {
+    background-color: #f9f9f9;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    opacity: 0.7;
+}
+
+.menu-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: auto; /* Push arrow to the right */
+    opacity: 0.5;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.05);
+    font-size: 16px;
+    color: #FF4D4D; /* Red color for logout */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: left;
+}
+
+.logout-button:hover {
+    background-color: #f9f9f9;
+}
+
+.logout-button .menu-icon {
+    /* Use same class for consistency */
+    /* Icon color might need adjustment if SVG */
+    filter: invert(58%) sepia(14%) saturate(6410%) hue-rotate(329deg) brightness(101%) contrast(101%); /* Attempt to make icon red */
+} 

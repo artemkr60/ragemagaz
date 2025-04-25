@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное - RAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Возможно, понадобится подключить шрифты -->
+</head>
+<body>
+    <div class="container">
+        <!-- Статус бар -->
+        <header class="status-bar">
+            <div class="time"></div>
+            <div class="status-icons"></div>
+        </header>
+
+        <!-- Контейнер для верхних иконок -->
+        <div class="top-icons-container">
+            <button class="icon-button">
+                <img src="../assets/Icons left.svg" alt="Назад">
+            </button>
+            <button class="icon-button">
+                <img src="../assets/Account.svg" alt="Аккаунт">
+            </button>
+        </div>
+
+        <!-- Фон шапки -->
+        <div class="header-background"></div>
+
+        <!-- Анимированная текстура фона -->
+        <div class="background-texture"></div>
+
+        <main class="main-content">
+            <!-- Заголовок страницы -->
+            <h1 class="page-title">Избранное</h1>
+
+            <!-- Список избранных товаров -->
+            <section class="favorites-list">
+
+                <!-- Пример карточки избранного товара 1 -->
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Футболка</span>
+                        <span class="item-price">$225.00</span>
+                        <span class="item-size">Size: US 7</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+
+                <!-- Пример карточки избранного товара 2 -->
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Кроссовки</span>
+                        <span class="item-price">$350.99</span>
+                        <span class="item-size">Size: US 10</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+
+                 <!-- Пример карточки избранного товара 3 -->
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+
+                <!-- Добавьте больше карточек здесь -->
+                <!-- Duplicate Start -->
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+                <article class="favorite-item">
+                    <div class="item-image-container">
+                        <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                    </div>
+                    <div class="item-details">
+                        <span class="item-name">Худи</span>
+                        <span class="item-price">$180.00</span>
+                        <span class="item-size">Size: L</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <img src="../assets/add_icon.svg" alt="Добавить в корзину">
+                    </button>
+                </article>
+                <!-- Duplicate End -->
+
+            </section>
+        </main>
+
+        <!-- Нижняя навигация -->
+        <footer class="bottom-nav">
+            <div class="nav-icons">
+                <a href="../HOMEPAGE/index.html" class="nav-icon">
+                    <img src="../assets/home1.svg" alt="Домой">
+                </a>
+                <a href="../CATALOG/index.html" class="nav-icon">
+                    <img src="../assets/catalog.svg" alt="Каталог">
+                </a>
+                <a href="#" class="nav-icon active">
+                    <img src="../assets/favorite1.svg" alt="Избранное">
+                </a>
+                <a href="../CART/index.html" class="nav-icon">
+                    <img src="../assets/shopping_cart.svg" alt="Корзина">
+                </a>
+            </div>
+            <div class="nav-slider-container">
+                <div class="nav-slider"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- UPDATED: Vertical Bounce Logic (Overscroll Only) --- 
+            const mainContent = document.querySelector('.main-content');
+            const scrollableList = document.querySelector('.favorites-list'); // Target list
+
+            if (mainContent && scrollableList) {
+                let startY = 0;
+                let startScrollTop = 0;
+                let currentTranslateY = 0;
+                let isDraggingBounce = false;
+                let pointerId = null;
+                let animationFrameIdBounce = null;
+                const maxBounce = 80; 
+                const decayFactor = maxBounce * 1.5; 
+
+                const getTranslateY = (element) => {
+                    const style = window.getComputedStyle(element);
+                    const matrix = new DOMMatrix(style.transform);
+                    return matrix.m42;
+                };
+
+                // Apply transform using rAF
+                const applyTransform = (translateY) => {
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = requestAnimationFrame(() => {
+                        scrollableList.style.transition = 'none'; 
+                        scrollableList.style.transform = `translateY(${translateY}px)`;
+                    });
+                };
+
+                mainContent.addEventListener('pointerdown', (e) => {
+                    // Allow bounce logic only if the event starts on the main scroll container 
+                    // or the list itself, not interactive elements within the list.
+                    if (e.target.closest('button, a, input')) {
+                        // Allow clicks on buttons inside items, but not direct drag start on them
+                        if(!e.target.closest('.favorite-item button')) return;
+                    }
+                    if (e.button !== 0) return;
+                    
+                    isDraggingBounce = true;
+                    pointerId = e.pointerId;
+                    startY = e.clientY;
+                    startScrollTop = mainContent.scrollTop; // Record initial scroll position
+                    currentTranslateY = getTranslateY(scrollableList); // Get current bounce 
+                    mainContent.style.cursor = 'grabbing';
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = null;
+                    // Explicitly set capture to the mainContent element
+                    mainContent.setPointerCapture(pointerId); 
+
+                    // Disable CSS transition only when starting drag
+                    scrollableList.style.transition = 'none';
+                }, { passive: false }); 
+
+                mainContent.addEventListener('pointermove', (e) => {
+                    if (!isDraggingBounce || e.pointerId !== pointerId) return;
+
+                    const currentY = e.clientY;
+                    const deltaYTotal = currentY - startY;
+                    
+                    // Calculate the scrollTop if we let the browser scroll naturally
+                    const potentialScrollTop = startScrollTop - deltaYTotal;
+                    const maxScrollTop = mainContent.scrollHeight - mainContent.clientHeight;
+
+                    let overscroll = 0;
+
+                    if (potentialScrollTop < 0) { 
+                        // Trying to scroll past the top
+                        overscroll = potentialScrollTop;
+                        mainContent.scrollTop = 0; // Prevent native scroll
+                        e.preventDefault(); // Prevent default scroll behavior
+                    } else if (potentialScrollTop > maxScrollTop) {
+                        // Trying to scroll past the bottom
+                        overscroll = potentialScrollTop - maxScrollTop;
+                        mainContent.scrollTop = maxScrollTop; // Prevent native scroll
+                         e.preventDefault(); // Prevent default scroll behavior
+                    } else {
+                        // Scrolling within bounds - allow native scroll, reset bounce
+                        if(getTranslateY(scrollableList) !== 0) {
+                           applyTransform(0);
+                        }
+                        // DO NOT prevent default, let the browser handle scrolling
+                        return; 
+                    }
+
+                    // Calculate bounce translation based on overscroll amount
+                    const targetTranslateY = maxBounce * Math.sign(-overscroll) * 
+                                           (1 - Math.exp(-Math.abs(overscroll) / decayFactor));
+                    applyTransform(targetTranslateY);
+                    
+                }, { passive: false }); // passive: false because we call preventDefault
+
+                const handlePointerEndBounce = (e) => {
+                    if (!isDraggingBounce || e.pointerId !== pointerId) return;
+                    
+                    isDraggingBounce = false;
+                    pointerId = null;
+                    mainContent.style.cursor = 'grab'; 
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = null;
+
+                    // Reset styles to allow CSS transition back to origin
+                    scrollableList.style.transition = ''; 
+                    scrollableList.style.transform = '';
+
+                    // Release pointer capture
+                    if (mainContent.hasPointerCapture(e.pointerId)) {
+                        mainContent.releasePointerCapture(e.pointerId);
+                    }
+                };
+
+                mainContent.addEventListener('pointerup', handlePointerEndBounce);
+                mainContent.addEventListener('pointercancel', handlePointerEndBounce);
+                mainContent.addEventListener('lostpointercapture', handlePointerEndBounce);
+            }
+            // --- END: Vertical Bounce Logic ---
+        });
+    </script>
+</body>
+</html> 

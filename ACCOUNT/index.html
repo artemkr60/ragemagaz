@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аккаунт - RAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Возможно, понадобится подключить шрифты -->
+</head>
+<body>
+    <div class="container">
+        <!-- Статус бар -->
+        <header class="status-bar">
+            <div class="time"></div>
+            <div class="status-icons"></div>
+        </header>
+
+        <!-- Контейнер для верхних иконок -->
+        <div class="top-icons-container">
+            <button class="icon-button icon-back">
+                <img src="../assets/Icons left.svg" alt="Назад">
+            </button>
+            <!-- Правой иконки здесь нет, как в корзине/избранном -->
+        </div>
+
+        <!-- Фон шапки -->
+        <div class="header-background"></div>
+
+        <!-- Анимированная текстура фона -->
+        <div class="background-texture"></div>
+
+        <main class="main-content account-page">
+            <!-- Заголовок страницы -->
+            <h1 class="page-title">Аккаунт</h1>
+            
+            <!-- Информация о пользователе -->
+            <section class="user-info">
+                <div class="user-avatar">
+                    <img src="../assets/avatar_placeholder.png" alt="Avatar" class="avatar-img"> <!-- Placeholder -->
+                </div>
+                <div class="user-details">
+                    <span class="user-name">Artem Kr</span> <!-- Placeholder -->
+                    <span class="user-email">artemkr@example.com</span> <!-- Placeholder -->
+                </div>
+            </section>
+
+            <!-- Меню аккаунта -->
+            <nav class="account-menu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="../assets/icon_profile.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                            <span>Редактировать профиль</span>
+                            <img src="../assets/icon_chevron_right.svg" alt="" class="menu-arrow"> <!-- Placeholder Icon -->
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="../assets/icon_orders.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                            <span>История Заказов</span>
+                            <img src="../assets/icon_chevron_right.svg" alt="" class="menu-arrow">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="../assets/icon_payment.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                            <span>Способы оплаты</span>
+                            <img src="../assets/icon_chevron_right.svg" alt="" class="menu-arrow">
+                        </a>
+                    </li>
+                     <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="../assets/icon_settings.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                            <span>Настройки</span>
+                            <img src="../assets/icon_chevron_right.svg" alt="" class="menu-arrow">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="../assets/icon_help.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                            <span>Помощь</span>
+                            <img src="../assets/icon_chevron_right.svg" alt="" class="menu-arrow">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Кнопка выхода -->
+            <button class="logout-button">
+                <img src="../assets/icon_logout.svg" alt="" class="menu-icon"> <!-- Placeholder Icon -->
+                <span>Выйти</span>
+            </button>
+            
+        </main>
+
+        <!-- Нижняя навигация -->
+        <footer class="bottom-nav">
+            <div class="nav-icons">
+                <a href="../HOMEPAGE/index.html" class="nav-icon">
+                    <img src="../assets/home1.svg" alt="Домой">
+                </a>
+                <a href="../CATALOG/index.html" class="nav-icon">
+                    <img src="../assets/catalog.svg" alt="Каталог">
+                </a>
+                <a href="../FAVORITE/index.html" class="nav-icon">
+                    <img src="../assets/favorite.svg" alt="Избранное">
+                </a>
+                <a href="../CART/index.html" class="nav-icon">
+                    <img src="../assets/shopping_cart.svg" alt="Корзина">
+                </a>
+            </div>
+            <div class="nav-slider-container">
+                <!-- Слайдер здесь не активен -->
+                 <div class="nav-slider" style="opacity: 0;"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Позже добавим JS для обработки кликов, если нужно -->
+    <!-- <script src="script.js"></script> --> 
+</body>
+</html> 

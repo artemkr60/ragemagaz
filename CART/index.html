@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - RAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Возможно, понадобится подключить шрифты -->
+</head>
+<body>
+    <div class="container">
+        <!-- Статус бар -->
+        <header class="status-bar">
+            <div class="time"></div>
+            <div class="status-icons"></div>
+        </header>
+
+        <!-- Контейнер для верхних иконок -->
+        <div class="top-icons-container">
+            <button class="icon-button">
+                <img src="../assets/Icons left.svg" alt="Назад">
+            </button>
+            <button class="icon-button">
+                <img src="../assets/Account.svg" alt="Аккаунт">
+            </button>
+        </div>
+
+        <!-- Фон шапки -->
+        <div class="header-background"></div>
+
+        <!-- Анимированная текстура фона -->
+        <div class="background-texture"></div>
+
+        <main class="main-content">
+            <!-- Список товаров в корзине -->
+            <section class="cart-list">
+
+                <!-- Пример товара в корзине 1 -->
+                <article class="cart-item-container">
+                    <div class="cart-item">
+                        <div class="item-image-container">
+                            <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Футболка</span>
+                            <span class="item-price">$225.00</span>
+                            <span class="item-size">Size: US 7</span>
+                            <button class="fav-btn">
+                                <img src="../assets/heart_icon.svg" alt="В избранное">
+                            </button>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn minus-btn">
+                                <img src="../assets/minus_icon.svg" alt="Уменьшить">
+                            </button>
+                            <span class="item-quantity">1</span>
+                            <button class="counter-btn plus-btn">
+                                <img src="../assets/add_icon.svg" alt="Увеличить">
+                            </button>
+                        </div>
+                    </div>
+                    <button class="delete-btn">
+                        <img src="../assets/delete_icon.svg" alt="Удалить">
+                    </button>
+                </article>
+
+                <!-- Пример товара в корзине 2 -->
+                <article class="cart-item-container">
+                   <div class="cart-item">
+                        <div class="item-image-container">
+                            <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Кроссовки</span>
+                            <span class="item-price">$350.99</span>
+                            <span class="item-size">Size: US 10</span>
+                             <button class="fav-btn">
+                                <img src="../assets/heart_icon.svg" alt="В избранное">
+                            </button>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn minus-btn">
+                                <img src="../assets/minus_icon.svg" alt="Уменьшить">
+                            </button>
+                            <span class="item-quantity">2</span>
+                            <button class="counter-btn plus-btn">
+                                <img src="../assets/add_icon.svg" alt="Увеличить">
+                            </button>
+                        </div>
+                    </div>
+                     <button class="delete-btn">
+                        <img src="../assets/delete_icon.svg" alt="Удалить">
+                    </button>
+                </article>
+
+                 <!-- Добавьте больше товаров здесь -->
+                <!-- Duplicate Start -->
+                 <article class="cart-item-container">
+                   <div class="cart-item">
+                        <div class="item-image-container">
+                            <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Кроссовки</span>
+                            <span class="item-price">$350.99</span>
+                            <span class="item-size">Size: US 10</span>
+                             <button class="fav-btn">
+                                <img src="../assets/heart_icon.svg" alt="В избранное">
+                            </button>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn minus-btn">
+                                <img src="../assets/minus_icon.svg" alt="Уменьшить">
+                            </button>
+                            <span class="item-quantity">2</span>
+                            <button class="counter-btn plus-btn">
+                                <img src="../assets/add_icon.svg" alt="Увеличить">
+                            </button>
+                        </div>
+                    </div>
+                     <button class="delete-btn">
+                        <img src="../assets/delete_icon.svg" alt="Удалить">
+                    </button>
+                </article>
+                 <article class="cart-item-container">
+                   <div class="cart-item">
+                        <div class="item-image-container">
+                            <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Кроссовки</span>
+                            <span class="item-price">$350.99</span>
+                            <span class="item-size">Size: US 10</span>
+                             <button class="fav-btn">
+                                <img src="../assets/heart_icon.svg" alt="В избранное">
+                            </button>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn minus-btn">
+                                <img src="../assets/minus_icon.svg" alt="Уменьшить">
+                            </button>
+                            <span class="item-quantity">2</span>
+                            <button class="counter-btn plus-btn">
+                                <img src="../assets/add_icon.svg" alt="Увеличить">
+                            </button>
+                        </div>
+                    </div>
+                     <button class="delete-btn">
+                        <img src="../assets/delete_icon.svg" alt="Удалить">
+                    </button>
+                </article>
+                 <article class="cart-item-container">
+                   <div class="cart-item">
+                        <div class="item-image-container">
+                            <img src="../assets/Image placeholder.svg" alt="" class="item-image placeholder">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Кроссовки</span>
+                            <span class="item-price">$350.99</span>
+                            <span class="item-size">Size: US 10</span>
+                             <button class="fav-btn">
+                                <img src="../assets/heart_icon.svg" alt="В избранное">
+                            </button>
+                        </div>
+                        <div class="item-counter">
+                            <button class="counter-btn minus-btn">
+                                <img src="../assets/minus_icon.svg" alt="Уменьшить">
+                            </button>
+                            <span class="item-quantity">2</span>
+                            <button class="counter-btn plus-btn">
+                                <img src="../assets/add_icon.svg" alt="Увеличить">
+                            </button>
+                        </div>
+                    </div>
+                     <button class="delete-btn">
+                        <img src="../assets/delete_icon.svg" alt="Удалить">
+                    </button>
+                </article>
+                <!-- Duplicate End -->
+
+            </section>
+        </main>
+
+         <!-- Блок с итоговой суммой и кнопкой -->
+        <section class="checkout-section">
+            <div class="total-price">
+                <span class="total-label">Total</span>
+                <span class="total-amount">$ 575.99</span> <!-- Пример -->
+            </div>
+            <button class="checkout-btn">CHECK OUT</button>
+        </section>
+
+        <!-- Нижняя навигация -->
+        <footer class="bottom-nav">
+            <div class="nav-icons">
+                <a href="../HOMEPAGE/index.html" class="nav-icon">
+                    <img src="../assets/home1.svg" alt="Домой">
+                </a>
+                <a href="../CATALOG/index.html" class="nav-icon">
+                    <img src="../assets/catalog.svg" alt="Каталог">
+                </a>
+                <a href="../FAVORITE/index.html" class="nav-icon">
+                    <img src="../assets/favorite.svg" alt="Избранное">
+                </a>
+                <a href="#" class="nav-icon active">
+                    <img src="../assets/shopping_cart1.svg" alt="Корзина">
+                </a>
+            </div>
+            <div class="nav-slider-container">
+                <div class="nav-slider"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swipeContainers = document.querySelectorAll('.cart-item-container');
+            const swipeThreshold = -50; // Мин. смещение для фиксации свайпа (px)
+            const itemSwipeDist = -80;  // На сколько сдвигается карточка влево (px)
+            const btnRevealDist = 70; // Ширина кнопки (px)
+
+            /* // ВРЕМЕННО ОТКЛЮЧАЕМ СВАЙП
+            swipeContainers.forEach(container => {
+                const swippableElement = container.querySelector('.cart-item');
+                const deleteButton = container.querySelector('.delete-btn');
+                let startX = 0;
+                let startY = 0;
+                let currentX = 0;
+                let isDragging = false;
+                let isSwiped = false;
+                let movedSinceDown = false;
+                let animationFrameId = null; // Для requestAnimationFrame
+
+                container.querySelectorAll('img').forEach(img => img.ondragstart = () => false);
+
+                // Функция для применения transform/opacity
+                const applyStyles = (itemTranslateX, btnTranslateX, btnOpacity) => {
+                    swippableElement.style.transform = `translateX(${itemTranslateX}px)`;
+                    deleteButton.style.transform = `translateX(${btnTranslateX}px)`;
+                    deleteButton.style.opacity = btnOpacity;
+                };
+
+                container.addEventListener('pointerdown', (e) => {
+                    if (e.button !== 0) return;
+                    if (e.target.closest('.cart-item button, .delete-btn')) return;
+
+                    isSwiped = container.dataset.swiped === 'true';
+                    startX = e.clientX;
+                    startY = e.clientY;
+                    isDragging = true;
+                    movedSinceDown = false;
+                    // Убираем CSS transition на время перетаскивания
+                    swippableElement.style.transition = 'none';
+                    deleteButton.style.transition = 'none';
+                    container.style.cursor = 'grabbing';
+                    container.setPointerCapture(e.pointerId);
+                    // Отменяем предыдущий RAF, если был
+                    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+                }, { passive: false });
+
+                container.addEventListener('pointermove', (e) => {
+                    if (!isDragging) return;
+
+                    const currentY = e.clientY;
+                    const deltaXAbs = Math.abs(e.clientX - startX);
+                    const deltaYAbs = Math.abs(currentY - startY);
+
+                    // Предотвращаем стандартное действие и всплытие при гориз. движении
+                    if (deltaXAbs > deltaYAbs) {
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                    }
+
+                    currentX = e.clientX;
+                    movedSinceDown = true;
+
+                    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+                    animationFrameId = requestAnimationFrame(() => {
+                        let deltaX = currentX - startX;
+                        let baseItemTranslateX = isSwiped ? itemSwipeDist : 0;
+                        let targetItemTranslateX = baseItemTranslateX + deltaX;
+
+                        // Ограничиваем смещение карточки
+                        targetItemTranslateX = Math.max(itemSwipeDist, Math.min(0, targetItemTranslateX));
+
+                        // Рассчитываем прогресс свайпа (0 = закрыто, 1 = полностью открыто)
+                        let swipeProgress = targetItemTranslateX / itemSwipeDist;
+                        swipeProgress = Math.min(1, Math.max(0, swipeProgress)); // Ограничиваем 0-1 для opacity/btn
+
+                        // Рассчитываем смещение и прозрачность кнопки
+                        let targetBtnTranslateX = btnRevealDist * (1 - swipeProgress);
+                        let targetBtnOpacity = swipeProgress;
+
+                        applyStyles(targetItemTranslateX, targetBtnTranslateX, targetBtnOpacity);
+                    });
+                }, { passive: false });
+
+                const handlePointerUpOrCancel = (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+
+                    container.style.cursor = 'grab';
+                    swippableElement.style.transition = 'transform 0.3s ease';
+                    deleteButton.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+
+                    // Получаем текущее реальное смещение карточки
+                    const currentTransform = window.getComputedStyle(swippableElement).transform;
+                    let currentTranslateX = 0;
+                    if (currentTransform !== 'none') {
+                        const matrix = new DOMMatrix(currentTransform);
+                        currentTranslateX = matrix.m41;
+                    }
+
+                    let shouldBeSwiped = false;
+
+                    // Решаем, фиксировать открытым или закрыть, на основе ПОЛОЖЕНИЯ при отпускании
+                    if (currentTranslateX < swipeThreshold) { // Достаточно сдвинуто влево
+                        shouldBeSwiped = true;
+                    } else { // Недостаточно сдвинуто или сдвинуто вправо
+                        shouldBeSwiped = false;
+                    }
+
+                    container.dataset.swiped = shouldBeSwiped ? 'true' : 'false';
+
+                    // Убираем инлайновые стили, CSS завершит анимацию
+                    swippableElement.style.transform = '';
+                    deleteButton.style.transform = '';
+                    deleteButton.style.opacity = '';
+
+                    if (container.hasPointerCapture(e.pointerId)) {
+                         container.releasePointerCapture(e.pointerId);
+                    }
+                };
+
+                container.addEventListener('pointerup', handlePointerUpOrCancel);
+                container.addEventListener('pointercancel', handlePointerUpOrCancel);
+                container.addEventListener('lostpointercapture', handlePointerUpOrCancel);
+
+                container.addEventListener('click', (e) => {
+                    if (!movedSinceDown && container.dataset.swiped === 'true' && !e.target.closest('.delete-btn')) {
+                         container.dataset.swiped = 'false';
+                         // Убираем инлайн стили, CSS вернет на место
+                         swippableElement.style.transform = '';
+                         deleteButton.style.transform = '';
+                         deleteButton.style.opacity = '';
+                    }
+                 }, true);
+            });
+            */ // КОНЕЦ ВРЕМЕННОГО ОТКЛЮЧЕНИЯ
+
+            // --- UPDATED: Vertical Bounce Logic (Overscroll Only) --- 
+            const mainContent = document.querySelector('.main-content');
+            const scrollableList = document.querySelector('.cart-list'); // Target list
+
+            if (mainContent && scrollableList) {
+                let startY = 0;
+                let startScrollTop = 0;
+                let currentTranslateY = 0;
+                let isDraggingBounce = false;
+                let pointerId = null;
+                let animationFrameIdBounce = null;
+                const maxBounce = 80; 
+                const decayFactor = maxBounce * 1.5; 
+
+                const getTranslateY = (element) => {
+                    const style = window.getComputedStyle(element);
+                    const matrix = new DOMMatrix(style.transform);
+                    return matrix.m42;
+                };
+
+                // Apply transform using rAF
+                const applyTransform = (translateY) => {
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = requestAnimationFrame(() => {
+                        scrollableList.style.transition = 'none'; 
+                        scrollableList.style.transform = `translateY(${translateY}px)`;
+                    });
+                };
+
+                mainContent.addEventListener('pointerdown', (e) => {
+                    // Allow bounce logic only if the event starts on the main scroll container 
+                    // or the list itself, not interactive elements within the list.
+                    if (e.target.closest('button, a, input') && !e.target.closest('.cart-item-container')) {
+                         // Allow clicks on buttons inside items, but not direct drag start on them
+                        if(!e.target.closest('.cart-item button')) return;
+                    }
+                    if (e.button !== 0) return;
+                    
+                    isDraggingBounce = true;
+                    pointerId = e.pointerId;
+                    startY = e.clientY;
+                    startScrollTop = mainContent.scrollTop; // Record initial scroll position
+                    currentTranslateY = getTranslateY(scrollableList); // Get current bounce 
+                    mainContent.style.cursor = 'grabbing';
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = null;
+                    // Explicitly set capture to the mainContent element
+                    mainContent.setPointerCapture(pointerId); 
+
+                    // Disable CSS transition only when starting drag
+                    scrollableList.style.transition = 'none';
+                }, { passive: false }); 
+
+                mainContent.addEventListener('pointermove', (e) => {
+                    if (!isDraggingBounce || e.pointerId !== pointerId) return;
+
+                    const currentY = e.clientY;
+                    const deltaYTotal = currentY - startY;
+                    
+                    // Calculate thescrollTop if we let the browser scroll naturally
+                    const potentialScrollTop = startScrollTop - deltaYTotal;
+                    const maxScrollTop = mainContent.scrollHeight - mainContent.clientHeight;
+
+                    let overscroll = 0;
+
+                    if (potentialScrollTop < 0) { 
+                        // Trying to scroll past the top
+                        overscroll = potentialScrollTop;
+                        mainContent.scrollTop = 0; // Prevent native scroll
+                        e.preventDefault(); // Prevent default scroll behavior
+                    } else if (potentialScrollTop > maxScrollTop) {
+                        // Trying to scroll past the bottom
+                        overscroll = potentialScrollTop - maxScrollTop;
+                        mainContent.scrollTop = maxScrollTop; // Prevent native scroll
+                         e.preventDefault(); // Prevent default scroll behavior
+                    } else {
+                        // Scrolling within bounds - allow native scroll, reset bounce
+                        if(getTranslateY(scrollableList) !== 0) {
+                           applyTransform(0);
+                        }
+                        // DO NOT prevent default, let the browser handle scrolling
+                        return; 
+                    }
+
+                    // Calculate bounce translation based on overscroll amount
+                    const targetTranslateY = maxBounce * Math.sign(-overscroll) * 
+                                           (1 - Math.exp(-Math.abs(overscroll) / decayFactor));
+                    applyTransform(targetTranslateY);
+                    
+                }, { passive: false }); // passive: false because we call preventDefault
+
+                const handlePointerEndBounce = (e) => {
+                    if (!isDraggingBounce || e.pointerId !== pointerId) return;
+                    
+                    isDraggingBounce = false;
+                    pointerId = null;
+                    mainContent.style.cursor = 'grab'; 
+                    if (animationFrameIdBounce) cancelAnimationFrame(animationFrameIdBounce);
+                    animationFrameIdBounce = null;
+
+                    // Reset styles to allow CSS transition back to origin
+                    scrollableList.style.transition = ''; 
+                    scrollableList.style.transform = '';
+
+                    // Release pointer capture
+                    if (mainContent.hasPointerCapture(e.pointerId)) {
+                        mainContent.releasePointerCapture(e.pointerId);
+                    }
+                };
+
+                mainContent.addEventListener('pointerup', handlePointerEndBounce);
+                mainContent.addEventListener('pointercancel', handlePointerEndBounce);
+                mainContent.addEventListener('lostpointercapture', handlePointerEndBounce);
+            }
+            // --- END: Vertical Bounce Logic ---
+        });
+    </script>
+</body>
+</html> 
