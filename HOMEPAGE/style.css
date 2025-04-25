@@ -98,17 +98,26 @@ body {
 /* } */
 
 .main-content {
-    /* padding-top: 44px; */ /* Отступ для фиксированного status-bar */
-    /* Дополнительный отступ сверху, чтобы контент начался ниже фона шапки */
-    /* Убедимся, что контент начинается ниже видимой части шапки */
-    padding-top: 110px; /* Высота header-background + небольшой отступ */
-    padding-bottom: 93px; /* Отступ снизу, равный высоте bottom-nav */
-    padding-left: 20px;
-    padding-right: 20px;
+    /* OLD padding-top: 110px; */
+    /* OLD padding-bottom: 93px; */
+    /* OLD padding-left: 20px; */
+    /* OLD padding-right: 20px; */
     overflow-y: auto;
-    flex-grow: 1;
-    z-index: 2; /* Выше .header-background */
-    position: relative;
+    /* OLD flex-grow: 1; */
+    z-index: 2; 
+    /* OLD position: relative; */
+    overscroll-behavior-y: contain; /* Keep for consistency */
+    -webkit-overflow-scrolling: touch; /* Keep for consistency */
+
+    /* NEW: Absolute positioning */
+    position: absolute;
+    top: 100px;  /* Below header */
+    bottom: 93px; /* Above bottom-nav */
+    left: 0;
+    right: 0;
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 20px 24px; /* Consistent padding */
 }
 
 .main-content section {
@@ -195,9 +204,9 @@ body {
     height: 4px;
     background-color: #A8FF00; /* Цвет слайдера из Figma */
     border-radius: 100px; /* Скругление из Figma */
-    width: 25%; /* Ширина слайдера (1/4 от контейнера для 4 иконок) */
+    width: 20px; /* NEW: Fixed width */
     position: absolute;
-    left: 0%;  /* ИЗМЕНЕНО: Позиция под первой иконкой (Домой) */
+    left: calc(12.5% - 10px); 
     transition: left 0.3s ease;
 }
 

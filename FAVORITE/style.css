@@ -117,14 +117,18 @@ body {
 }
 
 .main-content {
-    padding-top: 110px;
-    padding-bottom: 93px;
-    padding-left: 24px; /* Добавлен отступ для контента */
-    padding-right: 24px; /* Добавлен отступ для контента */
     overflow-y: auto;
-    flex-grow: 1;
     z-index: 2;
-    position: relative;
+    position: absolute;
+    top: 100px;
+    bottom: 93px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .icon-button {
@@ -201,9 +205,9 @@ body {
     height: 4px;
     background-color: #A8FF00;
     border-radius: 100px;
-    width: 25%;
+    width: 20px;
     position: absolute;
-    left: 50%; /* ИЗМЕНЕНО: Позиция под 3й иконкой */
+    left: calc(62.5% - 10px);
     transition: left 0.3s ease;
 }
 
