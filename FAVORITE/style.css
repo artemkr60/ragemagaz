@@ -177,6 +177,7 @@ body {
 
 .nav-icon {
     text-decoration: none;
+    position: relative;
 }
 
 .nav-icon img {
@@ -195,20 +196,16 @@ body {
     opacity: 1;
 }
 
-.nav-slider-container {
-    padding: 0 32px;
-    height: 4px;
-    position: relative;
-}
-
 .nav-slider {
     height: 4px;
     background-color: #A8FF00;
     border-radius: 100px;
-    width: 20px;
+    width: 14px;
     position: absolute;
-    left: calc(62.5% - 10px);
-    transition: left 0.3s ease;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: none;
 }
 
 /* Добавить стили для контента страницы Избранное ниже */

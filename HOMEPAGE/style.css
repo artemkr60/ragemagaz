@@ -180,6 +180,7 @@ body {
 
 .nav-icon {
     text-decoration: none;
+    position: relative; /* NEW: Needed for absolute child */
 }
 
 .nav-icon img {
@@ -194,20 +195,16 @@ body {
     opacity: 1; /* Активная иконка */
 }
 
-.nav-slider-container {
-    padding: 0 32px; /* Отступы как у иконок */
-    height: 4px; /* Высота для слайдера */
-    position: relative;
-}
-
 .nav-slider {
     height: 4px;
-    background-color: #A8FF00; /* Цвет слайдера из Figma */
-    border-radius: 100px; /* Скругление из Figma */
-    width: 20px; /* NEW: Fixed width */
+    background-color: #A8FF00; 
+    border-radius: 100px; 
+    width: 14px; /* Keep width */
     position: absolute;
-    left: calc(12.5% - 10px); 
-    transition: left 0.3s ease;
+    bottom: -8px; /* Keep vertical position */
+    left: 50%; /* Correct positioning relative to parent icon */
+    transform: translateX(-50%); /* Center the slider */
+    transition: none; 
 }
 
 /* TODO: Добавить стили для карточек (stores, arrivals, news) */
