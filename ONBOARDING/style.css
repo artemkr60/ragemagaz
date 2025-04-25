@@ -1,36 +1,26 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ONBOARDING/style.css - Rebuilt from ACCOUNT/style.css */
 
+/* --- Base Styles (from ACCOUNT/style.css) --- */
 body {
     margin: 0;
-    overflow: hidden;
-    font-family: 'Mulish', sans-serif; /* Ensure base font */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: red !important;
+    position: relative;
     min-height: 100vh;
-    background-color: #e0e0e0; /* Fallback background */
+    overflow: hidden; /* Keep hidden for onboarding */
+    font-family: 'Mulish', sans-serif;
+    overscroll-behavior-x: contain; 
+    border: 5px solid lime !important; /* Added border for visibility */
 }
 
-.onboarding-container {
+.container {
+    max-width: 428px;
+    margin: 0 auto;
     position: relative;
-    width: 375px; /* Base width from Figma, adjust as needed for responsiveness */
-    height: 812px; /* Base height from Figma */
-    border-radius: 50px;
+    min-height: 100vh;
     background: linear-gradient(to bottom, #F5F5F5, #777777);
-    box-shadow: 0px 20px 104px 0px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: hidden; /* Keep hidden for onboarding */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px; /* Add some padding */
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 428px;
 }
 
 .background-texture {
@@ -39,106 +29,177 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png'); /* NEW: Consistent path */
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png'); 
     background-repeat: repeat;
     background-size: 300px 300px;
     opacity: 0.53;
-    z-index: 1;
-    animation: moveDiagonal 25s linear infinite; /* Применяем анимацию */
+    z-index: 0;
+    animation: moveDiagonal 15s linear infinite;
 }
 
-/* Добавляем keyframes для анимации */
 @keyframes moveDiagonal {
     0% {
         background-position: 0 0;
     }
     100% {
-        background-position: 200px -200px; /* Сдвигаем на размер плитки вправо и вверх */
+        background-position: 300px -300px;
     }
 }
 
-.image-placeholder {
-    /* Placeholder for image area, adjust size and position as needed */
-    /* In the Figma data, it seems to be an instance with icons inside */
-    /* We might need to adjust this based on visual inspection */
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.1); /* Example placeholder style */
-    border-radius: 10px;
-    margin-bottom: 40px;
-    z-index: 2;
-    /* Icons styling if needed */
-    /* display: flex; justify-content: center; align-items: center; gap: 10px; */
+.status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 44px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+    color: #000000;
+    font-size: 15px;
+    font-family: 'Helvetica', sans-serif;
 }
 
-.content {
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #D9D9D9;
+    background-image: url('../HOMEPAGE/assets/cartographer_1_bg.png'); 
+    background-repeat: repeat;
+    background-size: 225px 225px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 90;
+}
+
+.top-icons-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 60px;
+    display: flex;
+    /* justify-content set inline in HTML */
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* Copied from ACCOUNT/style.css - might be needed if icons are added later */
+.top-icons-container img,
+.top-icons-container button {
+    pointer-events: auto;
+}
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.icon-button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+/**/
+
+/* Footer nav is hidden via inline style in HTML */
+/* .bottom-nav {...} */ 
+/* .nav-icons {...} */
+/* .nav-icon {...} */
+/* .nav-slider {...} */
+
+.main-content {
+    /* Use absolute positioning */
+    overflow-y: hidden; /* No scroll on onboarding */
     z-index: 2;
+    overscroll-behavior-y: contain; 
+    -webkit-overflow-scrolling: touch; 
+    position: absolute;
+    top: 100px;  
+    bottom: 93px; /* Respect footer space even if hidden */
+    left: 0;
+    right: 0;
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 20px 24px; 
+
+    /* Add centering styles */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    text-align: center;
+}
+
+/* REMOVED Account specific styles */
+
+/* --- End Base Styles --- */
+
+/* --- Onboarding Specific Styles --- */
+
+.image-placeholder {
+    /* Styles for the image area if needed */
+    width: 150px; /* Example size */
+    height: 150px;
+    background-color: rgba(255,255,255,0.2); /* Example */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    /* Add image/icon content via ::before or img tag if needed */
 }
 
 .content h1 {
     font-size: 24px;
-    font-weight: 600; /* Was 500 from Roboto */
+    font-weight: 600; 
     margin-bottom: 10px;
+    color: blue !important;
+    text-shadow: 0px 0px 12px rgba(168, 255, 0, 1);
 }
 
 .content p {
     font-size: 16px;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* More space before button */
+    color: #555;
+    max-width: 80%;
+}
+
+.start-button-link {
+    text-decoration: none;
 }
 
 .start-button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.17em;
-    text-transform: uppercase;
-    color: #FFFFFF; /* Text color from Figma was white */
-    background-color: #A8FF00;
+    background-color: #A8FF00; 
+    color: #000;
     border: none;
-    border-radius: 50px;
     padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0px 0px 18.2px 0px rgba(188, 255, 63, 1), 0px 0px 4px 0px rgba(255, 255, 255, 0.52); /* Combined shadows */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: 30px; /* Add some space above the button */
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 0px 0px 15px 0px rgba(168, 255, 0, 0.8);
 }
 
 .start-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px 0px rgba(188, 255, 63, 1.2), 0px 0px 6px 0px rgba(255, 255, 255, 0.7);
+    background-color: #97e600;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    .onboarding-container {
-        width: 95%;
-        height: auto;
-        min-height: 90vh;
-        border-radius: 30px;
-        padding: 30px 15px;
-    }
-
-    h1 {
-        font-size: 28px; /* Slightly smaller font on small screens */
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .start-button {
-        padding: 12px 30px;
-        font-size: 16px;
-    }
-
-    .image-placeholder {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 30px;
-    }
-} 
+/* --- End Onboarding Specific Styles --- */ 

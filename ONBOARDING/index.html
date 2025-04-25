@@ -8,21 +8,48 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="onboarding-container">
+    <!-- Use standard container -->
+    <div class="container">
+        <!-- Standard Header Elements -->
+        <header class="status-bar">
+            <div class="time"></div>
+            <div class="status-icons"></div>
+        </header>
+        <div class="top-icons-container" style="justify-content: center;">
+            <!-- No icons needed here typically -->
+        </div>
+        <div class="header-background"></div>
+
+        <!-- Background Texture -->
         <div class="background-texture"></div>
-        <div class="image-placeholder">
-            <!-- Icons will be loaded via CSS or JS if needed, or kept simple -->
-            <!-- <img src="assets/icon1.svg" alt="Icon 1">
-            <img src="assets/icon2.svg" alt="Icon 2">
-            <img src="assets/icon3.svg" alt="Icon 3"> -->
-        </div>
-        <div class="content">
-            <h1>Добро пожаловать в RAGE MAGAZ!</h1>
-            <p>Добро пожаловать в рэйдж магаз</p>
-            <a href="../HOMEPAGE/index.html" class="start-button-link">
-                <button class="start-button">Start</button>
-            </a>
-        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content onboarding-content">
+            <!-- Onboarding specific content -->
+            <div class="image-placeholder">
+                <!-- Placeholder for image/icons if needed -->
+            </div>
+            <div class="content">
+                <h1>Добро пожаловать в RAGE MAGAZ!</h1>
+                <p>Добро пожаловать в рэйдж магаз</p>
+                <a href="../HOMEPAGE/index.html" class="start-button-link">
+                    <button class="start-button">Start</button>
+                </a>
+            </div>
+        </main>
+
+        <!-- Standard Footer (Visually Hidden) -->
+        <footer class="bottom-nav" style="opacity: 0; pointer-events: none;">
+            <div class="nav-icons">
+                <a href="#" class="nav-icon"><img src="../assets/home1.svg" alt=""></a>
+                <a href="#" class="nav-icon"><img src="../assets/catalog.svg" alt=""></a>
+                <a href="#" class="nav-icon"><img src="../assets/favorite.svg" alt=""></a>
+                <a href="#" class="nav-icon"><img src="../assets/shopping_cart.svg" alt=""></a>
+            </div>
+            <div class="nav-slider-container">
+                 <div class="nav-slider"></div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
