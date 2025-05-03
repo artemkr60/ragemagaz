@@ -1,25 +1,19 @@
-/* ONBOARDING/style.css - Rebuilt from ACCOUNT/style.css */
+/* ONBOARDING/style.css - Styles based on Figma 4306-3130 */
 
-/* --- Base Styles (from ACCOUNT/style.css) --- */
 body {
     margin: 0;
-    background-color: red !important;
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden; /* Keep hidden for onboarding */
     font-family: 'Mulish', sans-serif;
-    overscroll-behavior-x: contain; 
-    border: 5px solid lime !important; /* Added border for visibility */
+    overscroll-behavior: none; /* Prevent bounce on this page */
 }
 
-.container {
+.container.onboarding-page {
     max-width: 428px;
+    min-height: 100vh;
     margin: 0 auto;
     position: relative;
-    min-height: 100vh;
     background: linear-gradient(to bottom, #F5F5F5, #777777);
-    overflow: hidden; /* Keep hidden for onboarding */
-    display: flex;
+    overflow: hidden; 
+    display: flex; /* Use flex to allow main-content to grow */
     flex-direction: column;
 }
 
@@ -44,6 +38,88 @@ body {
     100% {
         background-position: 300px -300px;
     }
+}
+
+.main-content {
+    flex-grow: 1; /* Allow content to take available space */
+    z-index: 1; /* Above background texture */
+    position: relative; /* Needed for z-index */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    text-align: center;
+    padding: 20px 24px; 
+    color: #FFFFFF; /* Default text color based on Figma */
+}
+
+
+h1 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 1.4; /* Adjust line height */
+    color: #FFFFFF;
+    text-shadow: 0px 0px 6.3px rgba(212, 252, 212, 1); /* #D4FCD4 */
+    margin: 0 0 15px 0; /* Adjust margin */
+}
+
+p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 6.3px rgba(212, 252, 212, 1); /* #D4FCD4 */
+    margin: 0 0 40px 0; /* Adjust margin */
+    max-width: 90%; 
+}
+
+.start-button-link {
+    text-decoration: none;
+}
+
+.start-button {
+    background-color: #A8FF00; 
+    color: #000000;
+    border: none;
+    padding: 15px 45px; /* Adjust padding */
+    border-radius: 50px;
+    font-family: 'Mulish', sans-serif; /* Keep consistent font */
+    font-size: 16px; /* Consistent with other buttons */
+    font-weight: 700; /* Bold */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    /* Combined Figma shadows */
+    box-shadow: 0px 0px 18.2px 0px rgba(188, 255, 63, 1), /* #BCFF3F */
+                0px 0px 4px 0px rgba(255, 255, 255, 0.52); 
+}
+
+.start-button:hover {
+    background-color: #97e600;
+    box-shadow: 0px 0px 22px 0px rgba(188, 255, 63, 1.2), /* Enhanced glow */
+                0px 0px 6px 0px rgba(255, 255, 255, 0.7); 
+}
+
+/* --- Base Styles (from ACCOUNT/style.css) --- */
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden; /* Keep hidden for onboarding */
+    font-family: 'Mulish', sans-serif;
+    overscroll-behavior-x: contain; 
+}
+
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F5F5, #777777);
+    overflow: hidden; /* Keep hidden for onboarding */
+    display: flex;
+    flex-direction: column;
 }
 
 .status-bar {
@@ -125,29 +201,6 @@ body {
 /* .nav-icon {...} */
 /* .nav-slider {...} */
 
-.main-content {
-    /* Use absolute positioning */
-    overflow-y: hidden; /* No scroll on onboarding */
-    z-index: 2;
-    overscroll-behavior-y: contain; 
-    -webkit-overflow-scrolling: touch; 
-    position: absolute;
-    top: 100px;  
-    bottom: 93px; /* Respect footer space even if hidden */
-    left: 0;
-    right: 0;
-    width: 100%; 
-    box-sizing: border-box; 
-    padding: 20px 24px; 
-
-    /* Add centering styles */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertical centering */
-    align-items: center; /* Horizontal centering */
-    text-align: center;
-}
-
 /* REMOVED Account specific styles */
 
 /* --- End Base Styles --- */
@@ -162,44 +215,6 @@ body {
     border-radius: 20px;
     margin-bottom: 30px;
     /* Add image/icon content via ::before or img tag if needed */
-}
-
-.content h1 {
-    font-size: 24px;
-    font-weight: 600; 
-    margin-bottom: 10px;
-    color: blue !important;
-    text-shadow: 0px 0px 12px rgba(168, 255, 0, 1);
-}
-
-.content p {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 40px; /* More space before button */
-    color: #555;
-    max-width: 80%;
-}
-
-.start-button-link {
-    text-decoration: none;
-}
-
-.start-button {
-    background-color: #A8FF00; 
-    color: #000;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.2s ease;
-    box-shadow: 0px 0px 15px 0px rgba(168, 255, 0, 0.8);
-}
-
-.start-button:hover {
-    background-color: #97e600;
 }
 
 /* --- End Onboarding Specific Styles --- */ 
