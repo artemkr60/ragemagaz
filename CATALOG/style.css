@@ -146,11 +146,27 @@ body {
 .catalog-page {
     max-width: 428px; /* Ширина макета из Figma */
     margin: 0 auto;
-    background-color: #fff; /* Основной фон контента */
-    min-height: 100vh; /* Или высота макета */
     position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F5F5, #777777);
+    overflow: hidden;
     padding-bottom: 93px; /* Высота нижней навигации */
     box-sizing: border-box;
+}
+
+.catalog-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/cartographer_1_bg.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.53;
+    z-index: 0;
+    animation: moveDiagonal 15s linear infinite;
 }
 
 /* Стили для шапки */
@@ -566,4 +582,4 @@ body {
     background-color: #97e600;
 }
 
-/* --- End Modal Styles --- */ 
+/* --- End Modal Styles --- */
