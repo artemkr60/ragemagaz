@@ -207,11 +207,11 @@ body {
     background: none;
     outline: none;
     font-size: 16px;
-    color: #FF0000; /* Изменено с фиолетового (#953FD3) на красный */
+    color: #953FD3; /* Цвет текста из Figma (с поправкой на opacity) */
 }
 
 .search-bar input::placeholder {
-    color: rgba(255, 0, 0, 0.4); /* Изменено с фиолетового на красный */
+    color: rgba(149, 63, 211, 0.4); /* Цвет плейсхолдера из Figma */
     font-weight: 300;
 }
 
@@ -249,7 +249,7 @@ body {
     border-radius: 18px; /* Примерное скругление */
     padding: 10px; /* Небольшой внутренний отступ */
     box-sizing: border-box;
-    box-shadow: 0px 0px 22px 0px rgba(255, 0, 0, 0.3); /* Изменено на красное свечение */
+    box-shadow: 0px 0px 22px 0px rgba(212, 252, 212, 1); /* ДОБАВЛЕНО: Свечение */
     margin-bottom: 10px; /* Добавим отступ снизу, если он нужен между элементами карточки */
 }
 
@@ -566,4 +566,4 @@ body {
     background-color: #97e600;
 }
 
-/* --- End Modal Styles --- */
+/* --- End Modal Styles --- */ 
